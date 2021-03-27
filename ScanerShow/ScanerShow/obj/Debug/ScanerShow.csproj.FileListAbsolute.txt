@@ -8,3 +8,4 @@ D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csproj.Gener
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csproj.CoreCompileInputs.cache
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.exe
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.pdb
+D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.db.Form2.resources

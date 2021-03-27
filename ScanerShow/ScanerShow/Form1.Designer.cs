@@ -34,6 +34,8 @@
             this.pbGraph = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableCost = new System.Windows.Forms.DataGridView();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -41,8 +43,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.newGame = new System.Windows.Forms.TextBox();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.удалитьДанныеОбИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.списокИгрПоДатеВыходаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGraph)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -50,6 +56,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,9 +64,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.selectGames1);
             this.groupBox1.Controls.Add(this.pbGraph);
-            this.groupBox1.Location = new System.Drawing.Point(2, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(455, 278);
+            this.groupBox1.Size = new System.Drawing.Size(455, 287);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Иcтория цен";
@@ -94,9 +101,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableCost);
-            this.groupBox2.Location = new System.Drawing.Point(463, 3);
+            this.groupBox2.Location = new System.Drawing.Point(463, 39);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(454, 470);
+            this.groupBox2.Size = new System.Drawing.Size(487, 470);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Цены на игру";
@@ -115,17 +122,31 @@
             this.date,
             this.cost});
             this.tableCost.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tableCost.Location = new System.Drawing.Point(6, 19);
+            this.tableCost.Location = new System.Drawing.Point(27, 19);
             this.tableCost.Name = "tableCost";
             this.tableCost.Size = new System.Drawing.Size(442, 436);
             this.tableCost.TabIndex = 0;
             this.tableCost.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableCost_CellContentClick);
             // 
+            // date
+            // 
+            this.date.HeaderText = "Дата";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 197;
+            // 
+            // cost
+            // 
+            this.cost.HeaderText = "Стоимость игры";
+            this.cost.Name = "cost";
+            this.cost.ReadOnly = true;
+            this.cost.Width = 200;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Location = new System.Drawing.Point(5, 287);
+            this.groupBox3.Location = new System.Drawing.Point(2, 332);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(452, 186);
             this.groupBox3.TabIndex = 2;
@@ -190,28 +211,62 @@
             this.newGame.TabIndex = 0;
             this.newGame.TextChanged += new System.EventHandler(this.newGame_TextChanged);
             // 
-            // date
+            // menuStrip1
             // 
-            this.date.HeaderText = "Дата";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 197;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.удалитьДанныеОбИгреToolStripMenuItem,
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem,
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem,
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem,
+            this.списокИгрПоДатеВыходаToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(962, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // cost
+            // удалитьДанныеОбИгреToolStripMenuItem
             // 
-            this.cost.HeaderText = "Стоимость игры";
-            this.cost.Name = "cost";
-            this.cost.ReadOnly = true;
-            this.cost.Width = 200;
+            this.удалитьДанныеОбИгреToolStripMenuItem.Name = "удалитьДанныеОбИгреToolStripMenuItem";
+            this.удалитьДанныеОбИгреToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
+            this.удалитьДанныеОбИгреToolStripMenuItem.Text = "Удалить данные об игре";
+            this.удалитьДанныеОбИгреToolStripMenuItem.Click += new System.EventHandler(this.удалитьДанныеОбИгреToolStripMenuItem_Click);
+            // 
+            // самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem
+            // 
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Name = "самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem";
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Size = new System.Drawing.Size(268, 20);
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Text = "Самая дешовая и самая дорогая игра на дату";
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Click += new System.EventHandler(this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem_Click);
+            // 
+            // средняяЦенаИгрыЗаПериодToolStripMenuItem
+            // 
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem.Name = "средняяЦенаИгрыЗаПериодToolStripMenuItem";
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem.Size = new System.Drawing.Size(182, 20);
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem.Text = "Средняя цена игры за период";
+            this.средняяЦенаИгрыЗаПериодToolStripMenuItem.Click += new System.EventHandler(this.средняяЦенаИгрыЗаПериодToolStripMenuItem_Click);
+            // 
+            // игрыВДиапазонеЦенНаДатуToolStripMenuItem
+            // 
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Name = "игрыВДиапазонеЦенНаДатуToolStripMenuItem";
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Size = new System.Drawing.Size(183, 20);
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Text = "Игры в диапазоне цен на дату";
+            // 
+            // списокИгрПоДатеВыходаToolStripMenuItem
+            // 
+            this.списокИгрПоДатеВыходаToolStripMenuItem.Name = "списокИгрПоДатеВыходаToolStripMenuItem";
+            this.списокИгрПоДатеВыходаToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
+            this.списокИгрПоДатеВыходаToolStripMenuItem.Text = "Список игр по дате выхода";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 475);
+            this.ClientSize = new System.Drawing.Size(962, 513);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "SteamScaner";
@@ -225,7 +280,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -246,6 +304,12 @@
         private System.Windows.Forms.TextBox newGame;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem удалитьДанныеОбИгреToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem средняяЦенаИгрыЗаПериодToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem игрыВДиапазонеЦенНаДатуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem списокИгрПоДатеВыходаToolStripMenuItem;
     }
 }
 

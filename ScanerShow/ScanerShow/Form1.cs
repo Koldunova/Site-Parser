@@ -215,5 +215,47 @@ namespace ScanerShow
         {
 
         }
+
+        private void удалитьДанныеОбИгреToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (selectGames1.Text.Length < 0) {
+                MessageBox.Show("Выберите игру");
+                return;
+            }
+            if (MessageBox.Show("Вы действительно хотите удалить данные игры?", "Внимание", MessageBoxButtons.YesNo)== DialogResult.Yes)
+            {
+                foreach (Game game in games)
+                {
+                    if (game.Name.Equals(selectGames1.Text))
+                    {
+                        Form2 form2 = new Form2(2, game, games);
+                    }
+                }
+            }
+        }
+
+        private void самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(1, null, games);
+        }
+
+        private void средняяЦенаИгрыЗаПериодToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (selectGames1.Text.Length < 0)
+            {
+                MessageBox.Show("Выберите игру");
+                return;
+            }
+
+            foreach (Game game in games)
+            {
+                if (game.Name.Equals(selectGames1.Text))
+                {
+                    Form2 form2 = new Form2(3, game, games);
+                }
+            }
+            
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ScannerSite.entity
 {
-    class Game
+    public class Game
     {
 
         //-2 не данных
