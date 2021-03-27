@@ -251,6 +251,7 @@
             this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Name = "игрыВДиапазонеЦенНаДатуToolStripMenuItem";
             this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Size = new System.Drawing.Size(183, 20);
             this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Text = "Игры в диапазоне цен на дату";
+            this.игрыВДиапазонеЦенНаДатуToolStripMenuItem.Click += new System.EventHandler(this.игрыВДиапазонеЦенНаДатуToolStripMenuItem_Click);
             // 
             // списокИгрПоДатеВыходаToolStripMenuItem
             // 

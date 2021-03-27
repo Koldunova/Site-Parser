@@ -28,6 +28,11 @@ namespace ScanerShow.db
             num_operation = num;
             this.game = game;
             this.games = games;
+            if (num == 4) {
+                groupBox1.Visible = true;
+                label2.Visible = false;
+                dateTimePicker2.Visible = false;
+            }
         }
 
 
@@ -46,6 +51,8 @@ namespace ScanerShow.db
             //1-самая дорогая и дешевая игра
             //2-удалить данные об игре
             //3-средня цена игы за период
+            //4-игры в диапазоне цен на дату
+            //5-список игр по дате выхода
 
             if (num_operation == 1) {
                 string mes = DBReader.findGameWithMinCost(dateTimePicker1.Value.ToString(), dateTimePicker2.Value.ToString()) + ". " +
@@ -61,6 +68,17 @@ namespace ScanerShow.db
 
             if (num_operation == 3) { 
                 String mes = DBReader.findGameWithAvgCost(dateTimePicker1.Value.ToString(), dateTimePicker2.Value.ToString(),game);
+                MessageBox.Show(mes);
+            }
+
+            if (num_operation == 4) {
+
+                String mes = DBReader.findGamesInDiap(dateTimePicker1.Value.ToString(), textBox1.Text, textBox2.Text);
+                MessageBox.Show(mes);
+            }
+
+            if (num_operation == 5) {
+                String mes = DBReader.getOrderListGames();
                 MessageBox.Show(mes);
             }
         }

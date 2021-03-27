@@ -75,6 +75,67 @@ namespace ScanerShow.db
             return "";
         }
 
+        public static String findGamesInDiap(string when, string from, string to) {
+            myConnection = new OleDbConnection(ConnectString);
+            try
+            {
+                myConnection.Open();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+            string query = "SELECT games.title FROM games INNER JOIN cost ON games.id = cost.idGame WHERE(((cost.cost) >= "+from+" And(cost.cost) <= "+to+")) and(cost.dateCost) = CDate('"+when+"') GROUP BY games.title;";
+
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            string result = "Результат: ";
+
+            while (reader.Read())
+            {
+                result = result + reader[0].ToString() + "     ";
+
+            }
+            reader.Close();
+
+            myConnection.Close();
+            return result;
+        }
+
+        public static string getOrderListGames() {
+            
+            myConnection = new OleDbConnection(ConnectString);
+            try
+            {
+                myConnection.Open();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+            string query = "SELECT games.title FROM games ORDER BY games.dateRealize;";
+
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            string result = "Результат: ";
+
+            while (reader.Read())
+            {
+                result = result + reader[0].ToString() + "     ";
+
+            }
+            reader.Close();
+
+            myConnection.Close();
+            return result;
+        }
+
         public static String findGameWithMaxCost(string from, string to)
         {
             myConnection = new OleDbConnection(ConnectString);

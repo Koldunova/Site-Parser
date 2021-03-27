@@ -257,5 +257,10 @@ namespace ScanerShow
             }
             
         }
+
+        private void игрыВДиапазонеЦенНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
