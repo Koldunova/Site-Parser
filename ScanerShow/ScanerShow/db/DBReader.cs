@@ -85,7 +85,7 @@ namespace ScanerShow.db
             }
 
 
-            string query = "SELECT games.title FROM games INNER JOIN cost ON games.id = cost.idGame WHERE(((cost.cost) >= "+from+" And(cost.cost) <= "+to+")) and(cost.dateCost) = CDate('"+when+"') GROUP BY games.title;";
+            string query = "SELECT games.title FROM games INNER JOIN cost ON games.id = cost.idGame WHERE(((cost.cost) >= "+from+" And(cost.cost) <= "+to+")) and(cost.dateCost) >= CDate('"+when.Substring(0, 10) + " 00:00:00') and(cost.dateCost) <= CDate('" + when.Substring(0, 10) + " 23:59:59') GROUP BY games.title;";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
             OleDbDataReader reader = command.ExecuteReader();
