@@ -173,6 +173,7 @@ namespace ScanerShow
 
         private void selectGames1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SetListGames();
             tableCost.Rows.Clear();
 
             List<Game> costs = findCostsSelectedGame();
@@ -219,7 +220,6 @@ namespace ScanerShow
 
         private void удалитьДанныеОбИгреToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("в процессе может не работать");
             if (selectGames1.Text.Length < 0) {
                 MessageBox.Show("Выберите игру");
                 return;
@@ -240,14 +240,12 @@ namespace ScanerShow
 
         private void самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("в процессе может не работать");
             Form2 form2 = new Form2(1, null, games);
             form2.Show();
         }
 
         private void средняяЦенаИгрыЗаПериодToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("в процессе может не работать");
             if (selectGames1.Text.Length < 0)
             {
                 MessageBox.Show("Выберите игру");
@@ -267,12 +265,14 @@ namespace ScanerShow
 
         private void игрыВДиапазонеЦенНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("в процессе может не работать");
+            Form2 form2 = new Form2(4, null, games);
+            form2.Show();
         }
 
         private void списокИгрПоДатеВыходаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("в процессе может не работать");
+            Form2 form2 = new Form2(5, null, games);
+            form2.Show();
         }
     }
 }

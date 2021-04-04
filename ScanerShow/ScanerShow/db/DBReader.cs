@@ -54,7 +54,6 @@ namespace ScanerShow.db
                 Console.WriteLine(e);
             }
 
-            List<Game> games = new List<Game>();
 
             string query = "SELECT top 1 Min(cost.cost) AS cost, games.title FROM cost LEFT JOIN games ON cost.idGame = games.id WHERE (((cost.[cost])>0) AND ((cost.dateCost) Between CDate('" + from + "') And CDate('" + to + "'))) GROUP BY games.title, cost.idGame ORDER BY Min(cost.cost);";
 
@@ -64,7 +63,6 @@ namespace ScanerShow.db
             while (reader.Read())
             {
                 String minCost = "Минимальная стоимость у игры: " + reader[1].ToString() + " (" + reader[0].ToString() + ")";
-                games.Add(new Game(reader[1].ToString(), double.Parse(reader[0].ToString()), DateTime.Parse(reader[2].ToString())));
                 reader.Close();
 
                 myConnection.Close();
@@ -147,8 +145,6 @@ namespace ScanerShow.db
             {
                 Console.WriteLine(e);
             }
-
-            List<Game> games = new List<Game>();
 
             string query = "SELECT top 1 Max(cost.cost) AS cost, games.title FROM cost LEFT JOIN games ON cost.idGame = games.id WHERE (((cost.[cost])>0) AND ((cost.dateCost) Between CDate('" + from + "') And CDate('" + to + "'))) GROUP BY games.title, cost.idGame ORDER BY Min(cost.cost);";
 
