@@ -216,9 +216,10 @@ namespace ScanerShow
 
         }
 
+
         private void удалитьДанныеОбИгреToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("в процессе может не работать");
             if (selectGames1.Text.Length < 0) {
                 MessageBox.Show("Выберите игру");
                 return;
@@ -230,6 +231,8 @@ namespace ScanerShow
                     if (game.Name.Equals(selectGames1.Text))
                     {
                         Form2 form2 = new Form2(2, game, games);
+                        form2.Show();
+                        break;
                     }
                 }
             }
@@ -237,11 +240,14 @@ namespace ScanerShow
 
         private void самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("в процессе может не работать");
             Form2 form2 = new Form2(1, null, games);
+            form2.Show();
         }
 
         private void средняяЦенаИгрыЗаПериодToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("в процессе может не работать");
             if (selectGames1.Text.Length < 0)
             {
                 MessageBox.Show("Выберите игру");
@@ -253,6 +259,7 @@ namespace ScanerShow
                 if (game.Name.Equals(selectGames1.Text))
                 {
                     Form2 form2 = new Form2(3, game, games);
+                    form2.Show();
                 }
             }
             
@@ -260,7 +267,12 @@ namespace ScanerShow
 
         private void игрыВДиапазонеЦенНаДатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("в процессе может не работать");
+        }
 
+        private void списокИгрПоДатеВыходаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("в процессе может не работать");
         }
     }
 }

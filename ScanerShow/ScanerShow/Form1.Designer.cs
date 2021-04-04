@@ -258,6 +258,7 @@
             this.списокИгрПоДатеВыходаToolStripMenuItem.Name = "списокИгрПоДатеВыходаToolStripMenuItem";
             this.списокИгрПоДатеВыходаToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
             this.списокИгрПоДатеВыходаToolStripMenuItem.Text = "Список игр по дате выхода";
+            this.списокИгрПоДатеВыходаToolStripMenuItem.Click += new System.EventHandler(this.списокИгрПоДатеВыходаToolStripMenuItem_Click);
             // 
             // Form1
             // 
