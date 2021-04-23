@@ -195,5 +195,36 @@ namespace ScanerShow.db
 
             return "";
         }
+
+        public static int selectIdGame(string gameName)
+        {
+            myConnection = new OleDbConnection(ConnectString);
+            try
+            {
+                myConnection.Open();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+            String query = $"Select id From games where title like '{gameName}'";
+
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            try
+            {
+                int result = int.Parse(command.ExecuteScalar().ToString());
+                myConnection.Close();
+                return result;
+            }
+            catch (NullReferenceException e)
+            {
+                myConnection.Close();
+                return -1;
+
+            }
+
+        }
+
     }
 }

@@ -31,5 +31,25 @@ namespace ScanerShow.db
 
             myConnection.Close();
         }
+
+        public static void insertNewCost(Game game, int id)
+        {
+
+            myConnection = new OleDbConnection(ConnectString);
+            try
+            {
+                myConnection.Open();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            String query = $"INSERT INTO cost (dateCost,idGame,cost) values ('{game.Date}',{id},'{game.Cost.ToString().Replace(".", ",")}')";
+
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.ExecuteNonQuery();
+            myConnection.Close();
+             
+        }
     }
 }

@@ -274,5 +274,23 @@ namespace ScanerShow
             Form2 form2 = new Form2(5, null, games);
             form2.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            //фильтер
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = openFileDialog1.FileName;
+            DBImport.importData(filename, selectGames1.Text);
+            SetListGames();
+            selectGames1_SelectedIndexChanged(null, null);
+        }
     }
 }

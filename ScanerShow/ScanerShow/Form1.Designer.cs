@@ -49,6 +49,7 @@
             this.средняяЦенаИгрыЗаПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.игрыВДиапазонеЦенНаДатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокИгрПоДатеВыходаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGraph)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.tableCost);
             this.groupBox2.Location = new System.Drawing.Point(463, 39);
             this.groupBox2.Name = "groupBox2";
@@ -124,7 +126,7 @@
             this.tableCost.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tableCost.Location = new System.Drawing.Point(27, 19);
             this.tableCost.Name = "tableCost";
-            this.tableCost.Size = new System.Drawing.Size(442, 436);
+            this.tableCost.Size = new System.Drawing.Size(442, 417);
             this.tableCost.TabIndex = 0;
             this.tableCost.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableCost_CellContentClick);
             // 
@@ -235,8 +237,8 @@
             // самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem
             // 
             this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Name = "самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem";
-            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Size = new System.Drawing.Size(268, 20);
-            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Text = "Самая дешовая и самая дорогая игра на дату";
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Size = new System.Drawing.Size(267, 20);
+            this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Text = "Самая дешевая и самая дорогая игра на дату";
             this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem.Click += new System.EventHandler(this.самаяДешоваяИСамаяДорогаяИграНаДатуToolStripMenuItem_Click);
             // 
             // средняяЦенаИгрыЗаПериодToolStripMenuItem
@@ -256,9 +258,19 @@
             // списокИгрПоДатеВыходаToolStripMenuItem
             // 
             this.списокИгрПоДатеВыходаToolStripMenuItem.Name = "списокИгрПоДатеВыходаToolStripMenuItem";
-            this.списокИгрПоДатеВыходаToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
+            this.списокИгрПоДатеВыходаToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
             this.списокИгрПоДатеВыходаToolStripMenuItem.Text = "Список игр по дате выхода";
             this.списокИгрПоДатеВыходаToolStripMenuItem.Click += new System.EventHandler(this.списокИгрПоДатеВыходаToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(442, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Импорт цен по выбранной игре из другой БД";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -312,6 +324,7 @@
         private System.Windows.Forms.ToolStripMenuItem средняяЦенаИгрыЗаПериодToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem игрыВДиапазонеЦенНаДатуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem списокИгрПоДатеВыходаToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

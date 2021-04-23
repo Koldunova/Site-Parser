@@ -9,3 +9,14 @@ D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csproj.CoreC
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.exe
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.pdb
 D:\яп\курсовой\ScanerShow\ScanerShow\obj\Debug\ScanerShow.db.Form2.resources
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\bin\Debug\ScanerShow.exe.config
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\bin\Debug\ScanerShow.exe
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\bin\Debug\ScanerShow.pdb
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.Form1.resources
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.db.Form2.resources
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.Properties.Resources.resources
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.exe
+C:\Users\user\Desktop\Другое\ScanerShow\ScanerShow\obj\Debug\ScanerShow.pdb
